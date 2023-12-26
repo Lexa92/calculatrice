@@ -1,0 +1,127 @@
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.device-name {
+    color: darkgrey;
+    margin: 0px;
+    padding: 0;
+    text-align: center;
+}
+.calculator {
+    background-color: #27c3e6;
+    padding: 20px;
+    border-radius: 15px;
+    transform: scale(.7);
+    box-shadow: 0 10px 30px rgba(37, 37, 37, 0.95);
+}
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    gap: 10px;
+}
+
+.grid-container > button {
+    /*cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    outline: none;
+    color:rgb(0, 0, 0);
+    border: 0px;
+    background-color: rgba(255, 255 ,255, 0.05);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+*/  padding: 10px;
+border-radius: 6px;
+border:none;
+background-color: #da1ea1;
+font-size: 20px;
+cursor: pointer;
+
+}
+
+.grid-container > button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(.91);
+    font-size: 1.3rem;
+}
+
+.grid-container > .operation {
+    font-size: 1.5rem;
+}
+
+
+
+
+.output-container {
+    grid-column: 1 / -1;
+    background-color:rgb(245, 241, 241);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    box-shadow: inset 0 0 10px rgb(37, 37, 37);
+    border-radius: 10px;
+}
+
+.output-container > .previous-operand {
+    font-size: 1.5rem;
+    color: rgba(3, 3, 3, 0.75);
+}
+.output-container > .current-operand {
+    font-size: 2rem;
+    color: rgba(10, 9, 9, 0.9);
+}
+
+.ac:hover, .del:hover{
+    background-color: rgba(227, 29, 29, 0.836) !important;
+    color: aliceblue;
+}
+ .plan:hover
+ {
+    color: aliceblue;
+ }
+
+.operation:hover{
+    background-color: rgba(242, 146, 12, 0.733) !important;
+    color: aliceblue;
+}
+.equals:hover{
+    background-color:rgba(242, 146, 12, 0.733) !important;
+   }
+
+.clear-operator
+{
+    background-color:rgba(242, 208, 12, 0.733) !important;
+}
+@media only screen and (max-width: 768px) {
+   .calculator {
+    transform: scale(.6);
+   }
+   
+}
